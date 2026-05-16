@@ -1,0 +1,9 @@
+export { Hero } from "./Hero";
+export { FeaturedCollection } from "./FeaturedCollection";
+export { BrandStory } from "./BrandStory";
+export { ProcessShowcase } from "./ProcessShowcase";
+export { Testimonials } from "./Testimonials";
+export { JournalPreview } from "./JournalPreview";
+export { Newsletter } from "./Newsletter";
+export { InstagramFeed } from "./InstagramFeed";
+export { HomePageSections } from "./HomePageSections";

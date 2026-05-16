@@ -1,0 +1,156 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  /* ── Color tokens ── */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  /* ── Sidebar tokens (admin) ── */
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* ── Typography ── */
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-fraunces);
+  --font-heading: var(--font-fraunces);
+
+  /* ── Radius (brand uses none/minimal rounding) ── */
+  --radius-sm: calc(var(--radius) * 0.5);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) * 1.5);
+  --radius-xl: calc(var(--radius) * 2);
+}
+
+/* ── Light mode ── */
+:root {
+  --background:              #F7F3EC;
+  --foreground:              #1F1B16;
+  --primary:                 #B5613D;
+  --primary-foreground:      #FBF8F2;
+  --secondary:               #9C8B73;
+  --secondary-foreground:    #1F1B16;
+  --accent:                  #8A9279;
+  --accent-foreground:       #FBF8F2;
+  --muted:                   #EDE5D6;
+  --muted-foreground:        #6B5E4D;
+  --border:                  #DCD2BF;
+  --input:                   #DCD2BF;
+  --ring:                    #B5613D;
+  --card:                    #FBF8F2;
+  --card-foreground:         #1F1B16;
+  --popover:                 #FBF8F2;
+  --popover-foreground:      #1F1B16;
+  --destructive:             #B5613D;
+  --destructive-foreground:  #FBF8F2;
+  --radius:                  0.125rem;
+
+  /* Sidebar (Pearl base for admin) */
+  --sidebar:                      #FBF8F2;
+  --sidebar-foreground:           #1F1B16;
+  --sidebar-primary:              #B5613D;
+  --sidebar-primary-foreground:   #FBF8F2;
+  --sidebar-accent:               #EDE5D6;
+  --sidebar-accent-foreground:    #1F1B16;
+  --sidebar-border:               #DCD2BF;
+  --sidebar-ring:                 #B5613D;
+}
+
+/* ── Dark mode ── */
+.dark {
+  --background:              #1F1B16;
+  --foreground:              #F7F3EC;
+  --primary:                 #8C4A2C;
+  --primary-foreground:      #F7F3EC;
+  --secondary:               #6B5E4D;
+  --secondary-foreground:    #EDE5D6;
+  --accent:                  #6B7262;
+  --accent-foreground:       #EDE5D6;
+  --muted:                   #2A241D;
+  --muted-foreground:        #9C8B73;
+  --border:                  #3A3029;
+  --input:                   #3A3029;
+  --ring:                    #8C4A2C;
+  --card:                    #252019;
+  --card-foreground:         #F7F3EC;
+  --popover:                 #252019;
+  --popover-foreground:      #F7F3EC;
+  --destructive:             #8C4A2C;
+  --destructive-foreground:  #F7F3EC;
+
+  --sidebar:                      #252019;
+  --sidebar-foreground:           #F7F3EC;
+  --sidebar-primary:              #8C4A2C;
+  --sidebar-primary-foreground:   #F7F3EC;
+  --sidebar-accent:               #2A241D;
+  --sidebar-accent-foreground:    #EDE5D6;
+  --sidebar-border:               #3A3029;
+  --sidebar-ring:                 #8C4A2C;
+}
+
+/* Announcement bar: hidden before React hydrates if localStorage flag is set.
+   The blocking inline script in (storefront)/layout.tsx adds this class
+   to <html> before first paint to prevent CLS. */
+html.announcement-dismissed [data-announcement-bar] {
+  display: none;
+}
+
+@utility ease-luxe {
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@utility ease-luxe-image {
+  transition-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  /* scroll-behavior: smooth removed — Lenis controls scroll, and CSS smooth-scroll
+     fights anchor jumps when Lenis is active. */
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Selection: terracotta on cream */
+  ::selection {
+    background-color: #B5613D;
+    color: #FBF8F2;
+  }
+
+  /* Focus ring: terracotta, 2px, offset 2 */
+  *:focus-visible {
+    outline: 2px solid #B5613D;
+    outline-offset: 2px;
+  }
+}
