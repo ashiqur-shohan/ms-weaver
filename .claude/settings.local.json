@@ -81,7 +81,11 @@
       "Bash(node -e \"const { z } = require\\('zod/v4'\\); const s = z.object\\({a: z.string\\(\\)}\\); console.log\\('_zod' in s, typeof s._zod\\);\")",
       "Bash(node -e \"const z = require\\('zod'\\); const s = z.string\\(\\); console.log\\('~standard-schema' in s\\);\")",
       "Bash(node -e \"const z = require\\('zod'\\); const s = z.string\\(\\); console.log\\(Object.getOwnPropertySymbols\\(s\\).map\\(sym => sym.toString\\(\\)\\)\\);\")",
-      "Bash(node -e \"const z = require\\('zod/v4'\\); const { z: zv4 } = z; const s = zv4.string\\(\\); console.log\\(Object.getOwnPropertySymbols\\(Object.getPrototypeOf\\(s\\)\\).map\\(sym => sym.toString\\(\\)\\)\\);\")"
+      "Bash(node -e \"const z = require\\('zod/v4'\\); const { z: zv4 } = z; const s = zv4.string\\(\\); console.log\\(Object.getOwnPropertySymbols\\(Object.getPrototypeOf\\(s\\)\\).map\\(sym => sym.toString\\(\\)\\)\\);\")",
+      "Bash(New-Item -ItemType Directory -Force -Path \"f:\\\\Personal\\\\ms-weaver\\\\src\\\\app\\\\\\(auth\\)\\\\auth\\\\sign-in\")",
+      "Bash(New-Item -ItemType Directory -Force -Path \"f:\\\\Personal\\\\ms-weaver\\\\src\\\\app\\\\\\(auth\\)\\\\auth\\\\register\")",
+      "Bash(New-Item -ItemType Directory -Force -Path \"f:\\\\Personal\\\\ms-weaver\\\\src\\\\app\\\\\\(auth\\)\\\\auth\\\\forgot\")",
+      "Bash(Write-Host \"Directories created\")"
     ],
     "additionalDirectories": [
       "F:\\Personal\\ms-weaver\\.claude",

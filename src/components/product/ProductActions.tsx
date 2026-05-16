@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Minus, Plus, Heart } from "@phosphor-icons/react";
 import { useCart } from "@/lib/store/cart";
+import { useWishlist, useWishlistIsItem } from "@/lib/store/wishlist";
 import { formatBDT } from "@/lib/utils";
 import type { Product, ProductVariant, CustomOption } from "@/lib/mock/products";
 
@@ -20,13 +21,14 @@ interface ProductActionsProps {
  */
 export function ProductActions({ product }: ProductActionsProps) {
   const { addItem, openCart } = useCart();
+  const { toggleItem } = useWishlist();
+  const wishlisted = useWishlistIsItem(product.id);
 
   const [selectedVariantId, setSelectedVariantId] = useState<string | undefined>(
     product.variants?.[0]?.id,
   );
   const [customValues, setCustomValues] = useState<Record<string, string>>({});
   const [quantity, setQuantity] = useState(1);
-  const [wishlisted, setWishlisted] = useState(false);
 
   const selectedVariant = product.variants?.find(
     (v) => v.id === selectedVariantId,
@@ -129,7 +131,7 @@ export function ProductActions({ product }: ProductActionsProps) {
             : `Add to cart · ${formatBDT(effectivePrice * quantity)}`}
         </button>
         <button
-          onClick={() => setWishlisted((w) => !w)}
+          onClick={() => toggleItem(product.id)}
           className="flex h-14 w-14 items-center justify-center border border-border text-muted-foreground transition-colors duration-200 hover:border-foreground hover:text-foreground"
           aria-label={wishlisted ? "Remove from wishlist" : "Add to wishlist"}
           aria-pressed={wishlisted}

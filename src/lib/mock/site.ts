@@ -107,7 +107,7 @@ export const siteConfig: SiteConfig = {
           { label: "Bridal", href: "/collections/bridal" },
           { label: "Home", href: "/collections/heirloom-home" },
           { label: "Accessories", href: "/collections/soft-accessories" },
-          { label: "Bespoke", href: "/bespoke" },
+          { label: "Bespoke", href: "/custom-order" },
         ],
       },
       {

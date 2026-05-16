@@ -1,9 +1,10 @@
 import Link from "next/link";
-import { MagnifyingGlass, User } from "@phosphor-icons/react/dist/ssr";
+import { MagnifyingGlass } from "@phosphor-icons/react/dist/ssr";
 import { siteConfig } from "@/lib/mock/site";
 import { Logo } from "./Logo";
 import { MobileNav } from "./MobileNav";
 import { CartButton } from "./CartButton";
+import { AccountButton } from "./AccountButton";
 import { HeaderScrollWrapper } from "./HeaderScrollWrapper";
 import { Container } from "./Container";
 
@@ -16,7 +17,7 @@ import { Container } from "./Container";
  * Scroll behaviour is handled by HeaderScrollWrapper (client component).
  */
 export function Header() {
-  const { primary, account } = siteConfig.nav;
+  const { primary } = siteConfig.nav;
 
   return (
     <HeaderScrollWrapper>
@@ -60,13 +61,7 @@ export function Header() {
             <MagnifyingGlass size={24} weight="regular" aria-hidden="true" />
           </Link>
 
-          <Link
-            href={account.loginHref}
-            aria-label="Account"
-            className="flex h-[44px] w-[44px] items-center justify-center text-foreground transition-opacity duration-200 hover:opacity-60"
-          >
-            <User size={24} weight="regular" aria-hidden="true" />
-          </Link>
+          <AccountButton />
 
           <CartButton />
         </div>

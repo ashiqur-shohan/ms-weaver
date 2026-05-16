@@ -3,6 +3,8 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { SmoothScroll } from "@/components/layout/SmoothScroll";
 import { CartHydration } from "@/components/layout/CartHydration";
+import { AuthHydration } from "@/components/layout/AuthHydration";
+import { WishlistHydration } from "@/components/layout/WishlistHydration";
 import { CartDrawer } from "@/components/cart/CartDrawer";
 
 /**
@@ -34,6 +36,8 @@ export default function StorefrontLayout({
         }}
       />
       <CartHydration />
+      <AuthHydration />
+      <WishlistHydration />
       <CartDrawer />
       <SmoothScroll>
         <div className="flex min-h-dvh flex-col bg-background text-foreground">

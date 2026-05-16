@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p \"f:/Personal/ms-weaver/src/app/\\(storefront\\)/account/orders/[id]\" \"f:/Personal/ms-weaver/src/app/\\(storefront\\)/account/wishlist\" \"f:/Personal/ms-weaver/src/app/\\(storefront\\)/account/addresses\" \"f:/Personal/ms-weaver/src/app/\\(storefront\\)/account/profile\" \"f:/Personal/ms-weaver/src/components/account\" \"f:/Personal/ms-weaver/src/components/auth\" && echo \"done\")",
+      "Bash(mkdir -p \"f:\\\\Personal\\\\ms-weaver\\\\src\\\\app\\\\\\(admin\\)\\\\admin\\\\products\\\\[id]\")",
+      "Bash(mkdir -p \"f:\\\\Personal\\\\ms-weaver\\\\src\\\\app\\\\\\(admin\\)\\\\admin\\\\orders\\\\[id]\")",
+      "Bash(mkdir -p \"f:\\\\Personal\\\\ms-weaver\\\\src\\\\app\\\\\\(admin\\)\\\\admin\\\\customers\\\\[id]\")",
+      "Bash(mkdir -p \"f:\\\\Personal\\\\ms-weaver\\\\src\\\\app\\\\\\(admin\\)\\\\admin\\\\custom-requests\\\\[id]\")",
+      "Bash(node -e \"const p = require\\('@phosphor-icons/react'\\); const names = Object.keys\\(p\\).filter\\(k => k.toLowerCase\\(\\).includes\\('chat'\\)\\); console.log\\(names.slice\\(0,10\\)\\)\")",
+      "Bash(node -e \"const p = require\\('@phosphor-icons/react'\\); const names = Object.keys\\(p\\).filter\\(k => k.toLowerCase\\(\\).includes\\('quote'\\)\\); console.log\\(names\\)\")",
+      "Bash(node -e \"const p = require\\('@phosphor-icons/react'\\); const names = Object.keys\\(p\\).filter\\(k => k.toLowerCase\\(\\).includes\\('quote'\\) || k.toLowerCase\\(\\).includes\\('testimonial'\\) || k.toLowerCase\\(\\).includes\\('speech'\\)\\); console.log\\(names\\)\")",
+      "Bash(node -e \"const p = require\\('@phosphor-icons/react'\\); const names = Object.keys\\(p\\).filter\\(k => !k.includes\\('Thin'\\) && !k.includes\\('Light'\\) && !k.includes\\('Bold'\\) && !k.includes\\('Fill'\\) && !k.includes\\('Duotone'\\)\\).slice\\(0,50\\); console.log\\(names.join\\('\\\\n'\\)\\)\")",
+      "Bash(node -e \"const p = require\\('@phosphor-icons/react/dist/ssr'\\); const names = Object.keys\\(p\\).filter\\(k => k.toLowerCase\\(\\).includes\\('chat'\\) || k.toLowerCase\\(\\).includes\\('star'\\) || k.toLowerCase\\(\\).includes\\('message'\\)\\); console.log\\(names.slice\\(0,20\\)\\)\")",
+      "Bash(node -e \"const p = require\\('@phosphor-icons/react/dist/ssr'\\); console.log\\(Object.keys\\(p\\).slice\\(0,30\\).join\\('\\\\n'\\)\\)\")",
+      "Bash(node --input-type=module -e \"import * as p from '@phosphor-icons/react/dist/ssr/index.js'; const names = Object.keys\\(p\\).filter\\(k => k.toLowerCase\\(\\).includes\\('chat'\\)\\); console.log\\(names\\);\")",
+      "Bash(pnpm list *)",
+      "Bash(mkdir -p \"f:\\\\Personal\\\\ms-weaver\\\\src\\\\app\\\\\\(admin\\)\\\\admin\\\\home-builder\" \"f:\\\\Personal\\\\ms-weaver\\\\src\\\\app\\\\\\(admin\\)\\\\admin\\\\pages\" \"f:\\\\Personal\\\\ms-weaver\\\\src\\\\app\\\\\\(admin\\)\\\\admin\\\\pages\\\\[slug]\" \"f:\\\\Personal\\\\ms-weaver\\\\src\\\\app\\\\\\(admin\\)\\\\admin\\\\journal\" \"f:\\\\Personal\\\\ms-weaver\\\\src\\\\app\\\\\\(admin\\)\\\\admin\\\\journal\\\\[id]\" \"f:\\\\Personal\\\\ms-weaver\\\\src\\\\app\\\\\\(admin\\)\\\\admin\\\\testimonials\" \"f:\\\\Personal\\\\ms-weaver\\\\src\\\\app\\\\\\(admin\\)\\\\admin\\\\lookbook\" \"f:\\\\Personal\\\\ms-weaver\\\\src\\\\app\\\\\\(admin\\)\\\\admin\\\\media\" \"f:\\\\Personal\\\\ms-weaver\\\\src\\\\app\\\\\\(admin\\)\\\\admin\\\\settings\\\\site\" \"f:\\\\Personal\\\\ms-weaver\\\\src\\\\app\\\\\\(admin\\)\\\\admin\\\\settings\\\\announcement-bar\" \"f:\\\\Personal\\\\ms-weaver\\\\src\\\\app\\\\\\(admin\\)\\\\admin\\\\settings\\\\seo\" \"f:\\\\Personal\\\\ms-weaver\\\\src\\\\app\\\\\\(admin\\)\\\\admin\\\\settings\\\\emails\" \"f:\\\\Personal\\\\ms-weaver\\\\src\\\\app\\\\\\(admin\\)\\\\admin\\\\settings\\\\discounts\" \"f:\\\\Personal\\\\ms-weaver\\\\src\\\\app\\\\\\(admin\\)\\\\admin\\\\settings\\\\shipping\" \"f:\\\\Personal\\\\ms-weaver\\\\src\\\\app\\\\\\(admin\\)\\\\admin\\\\settings\\\\tax\" \"f:\\\\Personal\\\\ms-weaver\\\\src\\\\app\\\\\\(admin\\)\\\\admin\\\\settings\\\\staff\" \"f:\\\\Personal\\\\ms-weaver\\\\src\\\\app\\\\\\(admin\\)\\\\admin\\\\settings\\\\analytics\" 2>&1)"
+    ],
+    "additionalDirectories": [
+      "f:\\Personal\\ms-weaver\\src\\app\\(storefront)\\account\\orders",
+      "f:\\Personal\\ms-weaver\\src\\app\\(admin)\\admin\\pages"
+    ]
+  }
+}
