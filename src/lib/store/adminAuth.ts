@@ -5,6 +5,8 @@ import { persist, createJSONStorage } from "zustand/middleware";
 
 // ─── Constants ────────────────────────────────────────────────────────────────
 
+// PHASE 1 ONLY — symbolic gate for the mock admin demo. Replace with Better Auth
+// + RBAC in Phase 2 before any public deploy.
 const ADMIN_PASSWORD = "msweaver-admin";
 
 // ─── Types ────────────────────────────────────────────────────────────────────

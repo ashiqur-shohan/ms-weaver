@@ -81,6 +81,25 @@ Next.js 15 (App Router) · React 19 · TypeScript (strict) · Tailwind CSS v4 ·
 
 - **Stock avatars / placeholder portraits** — Ashfia's real imagery to be supplied in Phase 2. Do not replace until confirmed assets are available.
 
+## Admin panel / storefront data divergence
+
+**Admin stores (`src/lib/store/admin/`) and storefront pages read from different sources and do NOT share state in Phase 1.**
+
+| Area | Admin reads from | Storefront reads from |
+|---|---|---|
+| Home sections | `useAdminHomeBuilder` (Zustand + localStorage) | `src/lib/mock/home.ts` |
+| Pages / CMS | `useAdminPages` (Zustand + localStorage) | `src/lib/mock/about.ts`, `faq.ts`, `careGuide.ts`, `legal.ts` |
+| Journal | `useAdminJournal` (Zustand + localStorage) | `src/lib/mock/journal.ts` |
+| Testimonials | `useAdminTestimonials` (Zustand + localStorage) | `src/lib/mock/testimonials.ts` |
+| Lookbook | `useAdminLookbook` (Zustand + localStorage) | `src/lib/mock/lookbook.ts` |
+| Site settings | `useAdminSiteSettings` (Zustand + localStorage) | `src/lib/mock/site.ts` |
+
+**This is intentional for Phase 1** — the admin panel demonstrates full CRUD UI without requiring a database. In Phase 2 (Drizzle + server actions), both the admin and storefront will read from the same database tables. Until then:
+
+- Do not refactor storefront pages to read from admin stores.
+- Do not add bridge logic (e.g. seeding mock from store on mount) — it creates a circular dependency.
+- If a storefront value appears "stale" after an admin edit, this is expected Phase 1 behaviour.
+
 ## Phase rules
 
 **Phase 1 = UI with mock data only.**

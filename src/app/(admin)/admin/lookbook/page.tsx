@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import { Plus, DotsThreeVertical } from "@phosphor-icons/react";
 import { toast } from "sonner";
 import { useAdminLookbook } from "@/lib/store/admin/lookbook";

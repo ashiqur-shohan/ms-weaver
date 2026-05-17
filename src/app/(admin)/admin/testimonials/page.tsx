@@ -35,7 +35,7 @@ function TestimonialDialog({
   const [author, setAuthor] = useState(initial?.author ?? "");
   const [role, setRole] = useState(initial?.role ?? "");
   const [avatar, setAvatar] = useState(initial?.avatar ?? "");
-  const [rating, setRating] = useState(initial?.rating ?? 5);
+  const [rating, setRating] = useState<1 | 2 | 3 | 4 | 5>(initial?.rating ?? 5);
   const [featured, setFeatured] = useState(initial?.featured ?? false);
 
   const handleSave = () => {
@@ -87,7 +87,7 @@ function TestimonialDialog({
               min={1}
               max={5}
               value={rating}
-              onChange={(e) => setRating(Number(e.target.value))}
+              onChange={(e) => setRating(Number(e.target.value) as 1 | 2 | 3 | 4 | 5)}
               className="w-full accent-primary"
             />
           </FormField>

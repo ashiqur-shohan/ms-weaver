@@ -36,8 +36,8 @@ export default function JournalPostPage() {
   const [readingTime, setReadingTime] = useState(String(post?.readingTimeMin ?? 5));
   const [publishedAt, setPublishedAt] = useState(
     post?.publishedAt
-      ? new Date(post.publishedAt).toISOString().split("T")[0]
-      : new Date().toISOString().split("T")[0],
+      ? new Date(post.publishedAt).toISOString().split("T")[0] ?? ""
+      : new Date().toISOString().split("T")[0] ?? "",
   );
   const [status, setStatus] = useState(post?.status ?? "draft");
   const [featured, setFeatured] = useState(post?.featured ?? false);
